@@ -7,7 +7,7 @@
     android:background="@color/material_dynamic_neutral99"
     android:paddingLeft="10dp"
     android:paddingRight="10dp"
-    tools:context=".ResetPasword">
+    tools:context=".view.ResetPasword">
 
     <ImageView
         android:id="@+id/returnLogin"

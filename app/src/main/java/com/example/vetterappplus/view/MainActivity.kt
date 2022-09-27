@@ -1,10 +1,10 @@
-package com.example.vetterappplus
+package com.example.vetterappplus.view
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import kotlinx.coroutines.selects.SelectBuilder
+import com.example.vetterappplus.R
 
 class MainActivity : AppCompatActivity() {
 
