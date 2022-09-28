@@ -47,7 +47,7 @@
         android:layout_height="wrap_content"
         tools:ignore="MissingConstraints"
         android:autoSizeTextType="uniform"
-        android:textSize="24dp"/>
+        android:textSize="22dp"/>
 
     <TextView
         android:id="@+id/infoReset2"
@@ -60,11 +60,11 @@
         tools:ignore="MissingConstraints"
         android:autoSizeTextType="uniform"
         android:gravity="center"
-        android:textSize="25dp"
+        android:textSize="22dp"
         />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputCorreoR"
+        android:id="@+id/tvDocumento"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -72,7 +72,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:backgroundTint="#003288AF"
-        android:hint="Correo"
+        android:hint="Cedula"
         app:endIconMode="clear_text"
         app:helperText="Required"
         app:counterEnabled="true"
@@ -80,12 +80,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/infoReset2"
-        app:startIconDrawable="@drawable/mail"
+        app:startIconDrawable="@drawable/ccdoc"
+        android:visibility="visible"
         tools:ignore="MissingConstraints">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/correoRecuperacion"
-            android:inputType="textEmailAddress"
+            android:id="@+id/documento"
+            android:inputType="number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -102,10 +103,23 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_margin="10dp"
-        android:text="Recuperar"
+        android:text="Recuperar credenciales"
         android:textColor="@color/white"
         android:backgroundTint="@color/blue"
         app:cornerRadius="5dp"
+        android:visibility="visible"
         tools:ignore="MissingConstraints" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/infoReset2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="150dp"
+        android:visibility="gone"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
