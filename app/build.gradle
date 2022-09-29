@@ -32,6 +32,9 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
@@ -58,6 +61,8 @@ dependencies {
     //Dagger Hilt
     implementation "com.google.dagger:hilt-android:$hilt_version"
     implementation 'androidx.databinding:databinding-runtime:7.3.0'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.2'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.5.2'
     kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
 
     //SplashScreen
@@ -69,4 +74,8 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    //Implementation Recler View
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+
 }

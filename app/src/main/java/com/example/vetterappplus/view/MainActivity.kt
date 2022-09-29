@@ -106,6 +106,7 @@ class MainActivity : AppCompatActivity() {
                         if (obj.getString("message") == "Bienvenido"){
                             Toast.makeText(this@MainActivity, obj.getString("message"), Toast.LENGTH_SHORT).show()
                             form(condition = true, progress = false)
+                            startActivity(Intent(this@MainActivity, Home::class.java))
                         }else if(obj.getString("message") == "Usuario y/o password incorrectos"){
                             AlertDialog.Builder(this@MainActivity).apply {
                                 setTitle("Informacion!!!")

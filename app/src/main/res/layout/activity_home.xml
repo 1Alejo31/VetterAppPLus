@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/font"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    tools:context=".view.Home">
+
+    <View
+        android:id="@+id/cabecera"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/roundstyle"
+        app:layout_constraintBottom_toTopOf="@id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="190dp"
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/transferLimitAmountCardView"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="@android:color/white"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toTopOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="@id/guideline">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/formulario"
+                android:layout_width="50dp"
+                android:layout_height="70dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_baseline_domain_add_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:id="@+id/formDog"
+                android:layout_width="50dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/fingerprint"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/map"
+                app:layout_constraintHorizontal_bias="0.823"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.3"
+                tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:id="@+id/listado"
+                android:layout_width="50dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/listcitas"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/formDog"
+                app:layout_constraintHorizontal_bias="0.519"
+                app:layout_constraintStart_toEndOf="@+id/formulario"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.3"
+                tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:id="@+id/map"
+                android:layout_width="50dp"
+                android:layout_height="70dp"
+                android:contentDescription="TODO"
+                android:src="@drawable/location"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/reciclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:scrollbarStyle="outsideInset"
+        android:scrollbars="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/transferLimitAmountCardView" />
+
+    <View
+        android:id="@+id/space"
+        android:layout_width="320dp"
+        android:layout_height="2dp"
+        android:background="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reciclerView"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/facebook"
+        android:layout_width="50dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/facebook"
+        app:layout_constraintTop_toBottomOf="@+id/space"
+        tools:ignore="MissingConstraints"
+        />
+
+    <ImageView
+        android:id="@+id/instagram"
+        android:layout_width="50dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/instagram"
+        app:layout_constraintStart_toEndOf="@id/facebook"
+        app:layout_constraintTop_toBottomOf="@+id/space"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/google"
+        android:layout_width="50dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/google"
+        app:layout_constraintStart_toEndOf="@id/instagram"
+        app:layout_constraintTop_toBottomOf="@+id/space"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/apple"
+        android:layout_width="60dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/manzana"
+        app:layout_constraintStart_toEndOf="@id/google"
+        app:layout_constraintTop_toBottomOf="@+id/space"
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

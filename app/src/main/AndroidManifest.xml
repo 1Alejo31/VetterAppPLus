@@ -20,6 +20,14 @@
         android:theme="@style/Theme.VetterAppPlus"
         tools:targetApi="31" >
         <activity
+            android:name=".view.Home"
+            android:exported="false" />
+        <activity
+            android:name=".home"
+            android:exported="false"
+            android:label="@string/title_activity_home"
+            android:theme="@style/Theme.VetterAppPlus.NoActionBar" />
+        <activity
             android:name=".beginning"
             android:exported="false" />
         <activity
